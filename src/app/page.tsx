@@ -87,17 +87,30 @@ export default function HomePage() {
         <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Monograph image with curtain reveal */}
           <div className="lg:col-span-6">
-            <ImageReveal type="curtainUp" delay={0.1}>
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#181818]">
-                <Image
-                  src="https://images.unsplash.com/photo-1723448837748-abfe11db8f45?auto=format&fit=crop&w=2000&q=85"
-                  alt="Spatial Poetics Monograph"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover filter brightness-85"
-                />
-              </div>
-            </ImageReveal>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+              <ImageReveal type="curtainUp" delay={0.08}>
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#181818]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=85"
+                    alt="Black Folding Chair Study"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-cover filter brightness-85"
+                  />
+                </div>
+              </ImageReveal>
+              <ImageReveal type="curtainUp" delay={0.16}>
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#181818]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1723448837748-abfe11db8f45?auto=format&fit=crop&w=2000&q=85"
+                    alt="Spatial Poetics Monograph"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-cover filter brightness-85"
+                  />
+                </div>
+              </ImageReveal>
+            </div>
           </div>
 
           {/* Right: Typography Emergence */}

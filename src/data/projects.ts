@@ -319,7 +319,7 @@ export const heroSlides = [
     title: "MONOLITH RESIDENCE",
     location: "Stockholm Archipelago, Sweden",
     narrative: "In the windswept coastal landscape of the archipelago, Monolith Residence rests as a quiet sanctuary. Raw board-marked concrete meets smoked oak joinery, framing panoramic sea horizons through precise architectural apertures.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85",
+    image: "https://images.unsplash.com/photo-1728722104881-773da8f4b7ea?auto=format&fit=crop&w=2000&q=85",
     slug: "monolith-residence",
     category: "Residential"
   },
