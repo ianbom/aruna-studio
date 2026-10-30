@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --background-secondary: #111111;
+  --background-elevated: #181818;
+
+  --foreground: #f0eee9;
+  --foreground-muted: #a6a49f;
+  --foreground-subtle: #777671;
+
+  --border: #292929;
+  --border-subtle: #202020;
+
+  --accent: #b8ad9b;
+  --accent-hover: #d1c5b2;
+
+  --overlay-dark: rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #0a0a0a;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Custom architectural utility classes */
+.tracking-architectural {
+  letter-spacing: 0.28em;
+}
+
+.tracking-loose-caps {
+  letter-spacing: 0.18em;
+}
+
+.vertical-lr {
+  writing-mode: vertical-lr;
+}
