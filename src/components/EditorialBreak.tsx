@@ -24,7 +24,7 @@ export default function EditorialBreak({
   const spacedTitle = title.toUpperCase().split("").join(" ");
 
   return (
-    <section className={`relative w-full ${heightClass} overflow-hidden my-16 md:my-28 bg-[#0a0a0a]`}>
+    <section className={`relative w-full ${heightClass} overflow-hidden my-16 md:my-28 bg-[#0a0a0a] dark`}>
       {/* Background Image with subtle scroll parallax */}
       <div className="absolute inset-0 w-full h-full">
         <ParallaxImage
@@ -38,7 +38,7 @@ export default function EditorialBreak({
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-black/30 to-[#0a0a0a]/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/60 pointer-events-none" />
 
       {/* Center Editorial Text */}
       <div className="absolute inset-0 flex items-center justify-center px-6 z-10">

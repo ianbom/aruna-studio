@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 pt-32 pb-24 text-foreground bg-[#0a0a0a]">
+    <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 pt-32 pb-24 text-foreground bg-background">
       <span className="text-[10px] uppercase tracking-ultra text-accent mb-4 block">
         404 &bull; Spatial Absence
       </span>

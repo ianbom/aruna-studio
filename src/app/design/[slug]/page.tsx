@@ -27,9 +27,9 @@ export default async function DesignDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="pt-24 md:pt-32 pb-28 text-foreground w-full bg-[#0a0a0a]">
+    <div className="pt-24 md:pt-32 pb-28 text-foreground w-full bg-background">
       {/* Header & Back Link */}
-      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-8 border-b border-[#202020] pb-8">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-8 border-b border-border-subtle pb-8">
         <ScrollReveal variant="fadeUpSubtle">
           <Link
             href="/design"
@@ -58,7 +58,7 @@ export default async function DesignDetailPage({ params }: Props) {
         {/* Left: Big Hero Image with Curtain Up Reveal */}
         <div className="lg:col-span-7">
           <ImageReveal type="scale" amount={0.08}>
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#121212]">
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-background-secondary">
               <Image
                 src={item.heroImage}
                 alt={item.title}
@@ -74,7 +74,7 @@ export default async function DesignDetailPage({ params }: Props) {
         {/* Right: Narrative & Technical Specifications */}
         <div className="lg:col-span-5 flex flex-col space-y-8">
           <ScrollReveal variant="fadeLeft" delay={0.1}>
-            <div className="bg-[#111111] border border-[#202020] p-8">
+            <div className="bg-background-secondary border border-border-subtle p-8">
               <span className="text-[10px] uppercase tracking-ultra text-accent mb-3 block">
                 Materiality &amp; Form
               </span>
@@ -82,29 +82,29 @@ export default async function DesignDetailPage({ params }: Props) {
                 {item.description}
               </p>
 
-              <h4 className="text-[11px] uppercase tracking-ultra text-foreground-muted mb-4 pt-4 border-t border-[#202020]">
+              <h4 className="text-[11px] uppercase tracking-ultra text-foreground-muted mb-4 pt-4 border-t border-border-subtle">
                 Specifications
               </h4>
               <dl className="space-y-3 text-xs">
-                <div className="flex justify-between border-b border-[#1f1f1f] pb-2">
+                <div className="flex justify-between border-b border-border-subtle pb-2">
                   <dt className="text-foreground-subtle">Primary Material</dt>
                   <dd className="text-foreground font-medium">{item.material}</dd>
                 </div>
-                <div className="flex justify-between border-b border-[#1f1f1f] pb-2">
+                <div className="flex justify-between border-b border-border-subtle pb-2">
                   <dt className="text-foreground-subtle">Surface Finish</dt>
                   <dd className="text-foreground">{item.finish}</dd>
                 </div>
-                <div className="flex justify-between border-b border-[#1f1f1f] pb-2">
+                <div className="flex justify-between border-b border-border-subtle pb-2">
                   <dt className="text-foreground-subtle">Dimensions</dt>
                   <dd className="text-foreground">{item.dimensions}</dd>
                 </div>
-                <div className="flex justify-between border-b border-[#1f1f1f] pb-2">
+                <div className="flex justify-between border-b border-border-subtle pb-2">
                   <dt className="text-foreground-subtle">Origin Year</dt>
                   <dd className="text-foreground">{item.year}</dd>
                 </div>
               </dl>
 
-              <div className="mt-8 pt-4 border-t border-[#202020]">
+              <div className="mt-8 pt-4 border-t border-border-subtle">
                 <a
                   href={`mailto:inquiries@arunaatelier.com?subject=Inquiry regarding: ${item.title}`}
                   className="block w-full text-center py-3 border border-accent/40 text-accent hover:border-accent hover:text-foreground text-[10px] tracking-widest uppercase transition-colors"
@@ -128,7 +128,7 @@ export default async function DesignDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {item.gallery.map((imgUrl, i) => (
               <ImageReveal key={i} type="curtainUp" delay={i * 0.1}>
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#121212]">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-background-secondary">
                   <Image
                     src={imgUrl}
                     alt={`${item.title} detail angle ${i + 1}`}

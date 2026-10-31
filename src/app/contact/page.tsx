@@ -35,7 +35,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-32 md:pt-40 pb-28 text-foreground bg-[#0a0a0a]">
+    <div className="pt-32 md:pt-40 pb-28 text-foreground bg-background">
       {/* 1. Header */}
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-20 md:mb-28">
         <ScrollReveal variant="fadeUpSubtle">
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 Direct Inboxes
               </h2>
               <div className="space-y-4">
-                <div className="bg-[#111111] border border-[#202020] p-6 flex items-center justify-between">
+                <div className="bg-background-secondary border border-border-subtle p-6 flex items-center justify-between">
                   <div>
                     <span className="text-[11px] text-foreground-subtle block uppercase tracking-wider mb-1">
                       New Commissions
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   </button>
                 </div>
 
-                <div className="bg-[#111111] border border-[#202020] p-6 flex items-center justify-between">
+                <div className="bg-background-secondary border border-border-subtle p-6 flex items-center justify-between">
                   <div>
                     <span className="text-[11px] text-foreground-subtle block uppercase tracking-wider mb-1">
                       Press &amp; Monograph
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </button>
                 </div>
 
-                <div className="bg-[#111111] border border-[#202020] p-6 flex items-center justify-between">
+                <div className="bg-background-secondary border border-border-subtle p-6 flex items-center justify-between">
                   <div>
                     <span className="text-[11px] text-foreground-subtle block uppercase tracking-wider mb-1">
                       Atelier Careers &amp; Internships
@@ -155,7 +155,7 @@ export default function ContactPage() {
                 Studio Locations
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div className="border-l border-[#292929] pl-6 space-y-2">
+                <div className="border-l border-border pl-6 space-y-2">
                   <span className="font-serif text-base text-foreground font-medium block">
                     Copenhagen Atelier
                   </span>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <div className="border-l border-[#292929] pl-6 space-y-2">
+                <div className="border-l border-border pl-6 space-y-2">
                   <span className="font-serif text-base text-foreground font-medium block">
                     New York Atelier
                   </span>
@@ -190,7 +190,7 @@ export default function ContactPage() {
         {/* Right Column: Structured Inquiry Form */}
         <div className="lg:col-span-7">
           <ScrollReveal variant="fadeLeft" delay={0.12}>
-            <div className="bg-[#111111] border border-[#202020] p-8 md:p-12">
+            <div className="bg-background-secondary border border-border-subtle p-8 md:p-12">
               <span className="text-[10px] uppercase tracking-ultra text-accent mb-3 block">
                 Initiate Project
               </span>
@@ -202,7 +202,7 @@ export default function ContactPage() {
               </p>
 
               {submitted ? (
-                <div className="bg-[#181818] border border-accent/40 p-8 text-center space-y-4">
+                <div className="bg-background-elevated border border-accent/40 p-8 text-center space-y-4">
                   <span className="text-accent text-[11px] uppercase tracking-widest block">
                     Inquiry Prepared
                   </span>
@@ -215,7 +215,7 @@ export default function ContactPage() {
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 px-6 py-2.5 border border-[#333] text-xs text-foreground-subtle hover:text-foreground uppercase tracking-widest transition-colors"
+                    className="mt-4 px-6 py-2.5 border border-border text-xs text-foreground-subtle hover:text-foreground uppercase tracking-widest transition-colors"
                   >
                     Send Another Note
                   </button>
@@ -232,7 +232,7 @@ export default function ContactPage() {
                         required
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        className="w-full bg-[#181818] border border-[#292929] text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
+                        className="w-full bg-background-elevated border border-border text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
                         placeholder="E.g. Elena Rostova"
                       />
                     </div>
@@ -246,7 +246,7 @@ export default function ContactPage() {
                         required
                         value={formState.email}
                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                        className="w-full bg-[#181818] border border-[#292929] text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
+                        className="w-full bg-background-elevated border border-border text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
                         placeholder="name@domain.com"
                       />
                     </div>
@@ -260,7 +260,7 @@ export default function ContactPage() {
                       <select
                         value={formState.inquiryType}
                         onChange={(e) => setFormState({ ...formState, inquiryType: e.target.value })}
-                        className="w-full bg-[#181818] border border-[#292929] text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
+                        className="w-full bg-background-elevated border border-border text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
                       >
                         <option value="Residential Architecture">Residential Architecture</option>
                         <option value="Hospitality / Sanctuary Retreat">Hospitality / Sanctuary Retreat</option>
@@ -278,7 +278,7 @@ export default function ContactPage() {
                         type="text"
                         value={formState.location}
                         onChange={(e) => setFormState({ ...formState, location: e.target.value })}
-                        className="w-full bg-[#181818] border border-[#292929] text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
+                        className="w-full bg-background-elevated border border-border text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
                         placeholder="E.g. Stockholm Archipelago, Sweden"
                       />
                     </div>
@@ -293,14 +293,14 @@ export default function ContactPage() {
                       rows={5}
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                      className="w-full bg-[#181818] border border-[#292929] text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
+                      className="w-full bg-background-elevated border border-border text-xs text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors"
                       placeholder="Tell us about the site context, approximate square footage, timeline, and design aspirations..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-accent hover:bg-accent-hover text-[#0a0a0a] text-xs uppercase tracking-ultra font-medium transition-colors"
+                    className="w-full py-4 bg-accent hover:bg-accent-hover text-background text-xs uppercase tracking-ultra font-medium transition-colors"
                   >
                     Dispatch Project Inquiry
                   </button>

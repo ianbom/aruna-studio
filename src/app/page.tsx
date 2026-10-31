@@ -17,7 +17,7 @@ export default function HomePage() {
   const objectItems = designItems.filter((d) => d.category === "Objects" || d.category === "Lighting").slice(0, 2);
 
   return (
-    <div className="flex flex-col w-full bg-[#0a0a0a] text-foreground">
+    <div className="flex flex-col w-full bg-background text-foreground">
       {/* 1. Hero Experience (Cinematic Opening Reveal) */}
       <HeroSlider />
 
@@ -81,12 +81,12 @@ export default function HomePage() {
       </section>
 
       {/* 5. Editorial Monograph Break (Directional Image & Text Split) */}
-      <section className="py-20 md:py-28 bg-[#111111] border-y border-[#202020] overflow-hidden">
+      <section className="py-20 md:py-28 bg-background-secondary border-y border-border-subtle overflow-hidden">
         <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Folding chair image requested for monograph section */}
           <div className="lg:col-span-6">
             <ScrollReveal variant="fadeUp" delay={0.05}>
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#181818] group">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-background-elevated group">
                 <Image
                   src="https://images.unsplash.com/photo-1554941829-202a0b2403b8?auto=format&fit=crop&w=2000&q=85"
                   alt="Black Folding Chair on Canvas - Studio Monograph"
@@ -192,7 +192,7 @@ export default function HomePage() {
                 >
                   <article className="group flex flex-col">
                     <Link href={`/design/${item.slug}`} className="block focus:outline-none">
-                      <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#121212]">
+                      <div className="relative aspect-[3/4] w-full overflow-hidden bg-background-secondary">
                         <Image
                           src={item.heroImage}
                           alt={item.title}
@@ -235,7 +235,7 @@ export default function HomePage() {
                 >
                   <article className="group flex flex-col">
                     <Link href={`/design/${item.slug}`} className="block focus:outline-none">
-                      <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#121212]">
+                      <div className="relative aspect-[16/10] w-full overflow-hidden bg-background-secondary">
                         <Image
                           src={item.heroImage}
                           alt={item.title}
@@ -265,7 +265,7 @@ export default function HomePage() {
       </section>
 
       {/* 10. Studio Invitation Banner (Minimal Cinematic Closing) */}
-      <section className="py-24 border-t border-[#1f1f1f] bg-[#0c0c0c] text-center px-6">
+      <section className="py-24 border-t border-border-subtle bg-background-secondary text-center px-6">
         <div className="max-w-xl mx-auto flex flex-col items-center">
           <ScrollReveal variant="fadeUpSubtle">
             <span className="text-[10px] uppercase tracking-ultra text-accent mb-4 block">

@@ -121,7 +121,7 @@ export default function ProjectCard({
         aria-label={`View ${project.title}`}
       >
         {/* Image Container with smooth editorial hover zoom */}
-        <div className={`relative w-full overflow-hidden bg-[#121212] ${aspectClass}`}>
+        <div className={`relative w-full overflow-hidden bg-background-secondary ${aspectClass}`}>
           <Image
             src={project.heroImage}
             alt={project.title}
@@ -133,7 +133,7 @@ export default function ProjectCard({
 
           {/* Hover / focus "View" tag */}
           <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300">
-            <span className="bg-[#0a0a0a]/80 backdrop-blur-sm text-[10px] tracking-widest uppercase text-accent px-3 py-1 border border-[#333]">
+            <span className="bg-background/80 backdrop-blur-sm text-[10px] tracking-widest uppercase text-accent px-3 py-1 border border-border">
               View
             </span>
           </div>

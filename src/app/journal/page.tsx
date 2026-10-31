@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 
 export default function JournalPage() {
   return (
-    <div className="pt-32 md:pt-40 pb-28 text-foreground bg-[#0a0a0a]">
+    <div className="pt-32 md:pt-40 pb-28 text-foreground bg-background">
       {/* Editorial Header */}
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-16 md:mb-24">
         <ScrollReveal variant="fadeUpSubtle">
@@ -37,7 +37,7 @@ export default function JournalPage() {
           >
             <div className="lg:col-span-8">
               <ScrollReveal variant="fadeUp" delay={0.05}>
-                <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#121212]">
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-background-secondary">
                   <Image
                     src={journalArticles[0].coverImage}
                     alt={journalArticles[0].title}
@@ -82,7 +82,7 @@ export default function JournalPage() {
       )}
 
       {/* Remaining Articles Grid */}
-      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 border-t border-[#202020] pt-16">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 border-t border-border-subtle pt-16">
         <ScrollReveal variant="fadeUpSubtle">
           <h2 className="text-xs uppercase tracking-ultra text-foreground-subtle mb-12">
             Archive
@@ -98,7 +98,7 @@ export default function JournalPage() {
             >
               <article className="group flex flex-col">
                 <Link href={`/journal/${article.slug}`} className="block focus:outline-none">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#121212] mb-6">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-background-secondary mb-6">
                     <Image
                       src={article.coverImage}
                       alt={article.title}

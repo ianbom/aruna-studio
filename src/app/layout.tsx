@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 const serifFont = Cormorant_Garamond({
   subsets: ["latin"],
@@ -38,11 +39,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${serifFont.variable} ${sansFont.variable} dark`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${serifFont.variable} ${sansFont.variable}`}
+    >
       <body className="font-sans bg-background text-foreground min-h-screen flex flex-col selection:bg-accent selection:text-background antialiased">
-        <Header />
-        <main className="flex-1 w-full">{children}</main>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <Header />
+          <main className="flex-1 w-full">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

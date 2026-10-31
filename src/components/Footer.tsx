@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0a0a0a] border-t border-[#1f1f1f] pt-16 md:pt-24 pb-12 text-foreground">
+    <footer className="w-full bg-background border-t border-border-subtle pt-16 md:pt-24 pb-12 text-foreground">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
         {/* Top Section: Wordmark & Philosophy */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#1f1f1f]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-border-subtle">
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <Link href="/" className="inline-block mb-6 focus:outline-none">
@@ -21,12 +21,12 @@ export default function Footer() {
 
             <div className="mt-8 flex items-center space-x-6 text-xs text-foreground-subtle">
               <div>
-                <span className="block uppercase text-[10px] tracking-widest text-[#555]">Copenhagen Studio</span>
+                <span className="block uppercase text-[10px] tracking-widest text-foreground-subtle">Copenhagen Studio</span>
                 <span className="font-mono text-foreground-muted">Amalienborg Plads 4, DK</span>
               </div>
-              <div className="h-6 w-[1px] bg-[#222]" />
+              <div className="h-6 w-[1px] bg-border" />
               <div>
-                <span className="block uppercase text-[10px] tracking-widest text-[#555]">New York Atelier</span>
+                <span className="block uppercase text-[10px] tracking-widest text-foreground-subtle">New York Atelier</span>
                 <span className="font-mono text-foreground-muted">Franklin St, Tribeca, NYC</span>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function Footer() {
           <p className="tracking-widest">
             &copy; 2026 ARUNA ATELIER. All rights reserved.
           </p>
-          <p className="mt-4 md:mt-0 tracking-wider text-[11px] text-[#555]">
+          <p className="mt-4 md:mt-0 tracking-wider text-[11px] text-foreground-subtle">
             Architecture &bull; Interiors &bull; Spatial Design
           </p>
         </div>

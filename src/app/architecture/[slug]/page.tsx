@@ -34,9 +34,9 @@ export default async function ArchitectureDetailPage({ params }: Props) {
     projectIndex < projects.length - 1 ? projects[projectIndex + 1] : projects[0];
 
   return (
-    <div className="pt-24 md:pt-32 pb-28 text-foreground w-full bg-[#0a0a0a]">
+    <div className="pt-24 md:pt-32 pb-28 text-foreground w-full bg-background">
       {/* 1. Project Title & Back Navigation */}
-      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-8 flex flex-col md:flex-row md:items-end justify-between border-b border-[#202020] pb-8">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-8 flex flex-col md:flex-row md:items-end justify-between border-b border-border-subtle pb-8">
         <div>
           <ScrollReveal variant="fadeUpSubtle">
             <Link
@@ -84,7 +84,7 @@ export default async function ArchitectureDetailPage({ params }: Props) {
       {/* 2. Hero Image (Immediate entrance, no waiting) */}
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-16 md:mb-24">
         <ImageReveal type="scale" amount={0.05}>
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#121212]">
+          <div className="relative aspect-[16/9] w-full overflow-hidden bg-background-secondary">
             <Image
               src={project.heroImage}
               alt={project.title}
@@ -119,13 +119,13 @@ export default async function ArchitectureDetailPage({ params }: Props) {
         {/* Right: Project Specifications Data Table */}
         <div className="lg:col-span-5 self-start">
           <ScrollReveal variant="fadeLeft" delay={0.1}>
-            <div className="bg-[#111111] border border-[#202020] p-8">
+            <div className="bg-background-secondary border border-border-subtle p-8">
               <h3 className="text-[11px] uppercase tracking-ultra text-accent mb-6 font-medium">
                 Project Data
               </h3>
               <dl className="space-y-4 text-xs">
                 {project.specs.map((spec, i) => (
-                  <div key={i} className="flex justify-between border-b border-[#202020] pb-2.5">
+                  <div key={i} className="flex justify-between border-b border-border-subtle pb-2.5">
                     <dt className="text-foreground-subtle font-light">{spec.label}</dt>
                     <dd className="text-foreground font-normal text-right">{spec.value}</dd>
                   </div>
@@ -150,7 +150,7 @@ export default async function ArchitectureDetailPage({ params }: Props) {
         {project.gallery[0] && (
           <ImageReveal type="curtainUp">
             <figure className="flex flex-col space-y-3">
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#121212]">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-background-secondary">
                 <Image
                   src={project.gallery[0].url}
                   alt={project.gallery[0].caption || project.title}
@@ -178,7 +178,7 @@ export default async function ArchitectureDetailPage({ params }: Props) {
                 delay={idx === 1 ? 0.1 : 0}
               >
                 <figure className="flex flex-col space-y-3">
-                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#121212]">
+                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-background-secondary">
                     <Image
                       src={item.url}
                       alt={item.caption || project.title}
@@ -201,7 +201,7 @@ export default async function ArchitectureDetailPage({ params }: Props) {
         {/* Closing wide image with subtle parallax container */}
         {project.gallery[3] && (
           <figure className="flex flex-col space-y-3">
-            <div className="relative aspect-[21/9] min-h-[320px] w-full overflow-hidden bg-[#121212]">
+            <div className="relative aspect-[21/9] min-h-[320px] w-full overflow-hidden bg-background-secondary">
               <ParallaxImage
                 src={project.gallery[3].url}
                 alt={project.gallery[3].caption || project.title}
@@ -222,7 +222,7 @@ export default async function ArchitectureDetailPage({ params }: Props) {
 
       {/* 5. Sequential Navigation Footer (Matching Reference) */}
       <ScrollReveal variant="fadeUpSubtle">
-        <div className="border-t border-[#202020] pt-12 max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 flex items-center justify-between">
+        <div className="border-t border-border-subtle pt-12 max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 flex items-center justify-between">
           <Link
             href={`/architecture/${prevProject.slug}`}
             className="group flex flex-col text-left"

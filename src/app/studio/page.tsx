@@ -5,7 +5,7 @@ import TextReveal from "@/components/motion/TextReveal";
 
 export default function StudioPage() {
   return (
-    <div className="pt-32 md:pt-40 pb-28 text-foreground bg-[#0a0a0a]">
+    <div className="pt-32 md:pt-40 pb-28 text-foreground bg-background">
       {/* 1. Header Intro */}
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-20 md:mb-28">
         <ScrollReveal variant="fadeUpSubtle">
@@ -29,7 +29,7 @@ export default function StudioPage() {
 
       {/* 2. Full-Width Studio Atmosphere Image with subtle parallax */}
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mb-24 md:mb-32">
-        <div className="relative aspect-[21/9] min-h-[350px] w-full overflow-hidden bg-[#121212]">
+        <div className="relative aspect-[21/9] min-h-[350px] w-full overflow-hidden bg-background-secondary">
           <ParallaxImage
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=85"
             alt="Aruna Atelier Studio Space"
@@ -78,7 +78,7 @@ export default function StudioPage() {
       </div>
 
       {/* 4. Disciplines & Services */}
-      <div className="bg-[#111111] border-y border-[#202020] py-24 mb-28 overflow-hidden">
+      <div className="bg-background-secondary border-y border-border-subtle py-24 mb-28 overflow-hidden">
         <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16">
           <ScrollReveal variant="fadeUpSubtle">
             <span className="text-[10px] uppercase tracking-ultra text-accent mb-4 block">
@@ -94,7 +94,7 @@ export default function StudioPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <ScrollReveal variant="fadeUp" delay={0.06}>
-              <div className="flex flex-col space-y-4 border-l border-[#292929] pl-6">
+              <div className="flex flex-col space-y-4 border-l border-border pl-6">
                 <span className="text-[11px] font-mono text-accent">01</span>
                 <h3 className="font-serif text-lg text-foreground font-normal">
                   Architecture
@@ -106,7 +106,7 @@ export default function StudioPage() {
             </ScrollReveal>
 
             <ScrollReveal variant="fadeUp" delay={0.14}>
-              <div className="flex flex-col space-y-4 border-l border-[#292929] pl-6">
+              <div className="flex flex-col space-y-4 border-l border-border pl-6">
                 <span className="text-[11px] font-mono text-accent">02</span>
                 <h3 className="font-serif text-lg text-foreground font-normal">
                   Interior Architecture
@@ -118,7 +118,7 @@ export default function StudioPage() {
             </ScrollReveal>
 
             <ScrollReveal variant="fadeUp" delay={0.22}>
-              <div className="flex flex-col space-y-4 border-l border-[#292929] pl-6">
+              <div className="flex flex-col space-y-4 border-l border-border pl-6">
                 <span className="text-[11px] font-mono text-accent">03</span>
                 <h3 className="font-serif text-lg text-foreground font-normal">
                   Furniture &amp; Objects
@@ -135,7 +135,7 @@ export default function StudioPage() {
       {/* 5. Dual Studio Locations */}
       <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-12">
         <ScrollReveal variant="fadeRight" delay={0.05}>
-          <div className="bg-[#141414] border border-[#222222] p-8 md:p-12 h-full">
+          <div className="bg-background-secondary border border-border-subtle p-8 md:p-12 h-full">
             <span className="text-[10px] tracking-ultra text-accent uppercase block mb-3">
               Atelier 01
             </span>
@@ -154,7 +154,7 @@ export default function StudioPage() {
         </ScrollReveal>
 
         <ScrollReveal variant="fadeLeft" delay={0.12}>
-          <div className="bg-[#141414] border border-[#222222] p-8 md:p-12 h-full">
+          <div className="bg-background-secondary border border-border-subtle p-8 md:p-12 h-full">
             <span className="text-[10px] tracking-ultra text-accent uppercase block mb-3">
               Atelier 02
             </span>

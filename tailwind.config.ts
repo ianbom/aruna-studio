@@ -20,6 +20,7 @@ const config: Config = {
         "border-subtle": "var(--border-subtle)",
         accent: "var(--accent)",
         "accent-hover": "var(--accent-hover)",
+        "overlay-dark": "var(--overlay-dark)",
       },
       fontFamily: {
         serif: ["var(--font-serif)", "serif"],

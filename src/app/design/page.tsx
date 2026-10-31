@@ -44,7 +44,7 @@ export default function DesignListingPage() {
 
       {/* Filter Tabs */}
       <ScrollReveal variant="fadeUpSubtle" delay={0.18}>
-        <div className="flex items-center space-x-6 md:space-x-10 border-b border-[#222222] pb-4 mb-16 overflow-x-auto text-xs tracking-widest uppercase">
+        <div className="flex items-center space-x-6 md:space-x-10 border-b border-border-subtle pb-4 mb-16 overflow-x-auto text-xs tracking-widest uppercase">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -76,7 +76,7 @@ export default function DesignListingPage() {
             >
               <article className="group flex flex-col">
                 <Link href={`/design/${item.slug}`} className="block focus:outline-none">
-                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#121212]">
+                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-background-secondary">
                     <Image
                       src={item.heroImage}
                       alt={item.title}
@@ -85,7 +85,7 @@ export default function DesignListingPage() {
                       className="object-cover object-center filter brightness-[0.85] contrast-[1.02] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                     />
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="bg-[#0a0a0a]/80 backdrop-blur-sm text-[10px] tracking-widest uppercase text-accent px-3 py-1 border border-[#333]">
+                      <span className="bg-background/80 backdrop-blur-sm text-[10px] tracking-widest uppercase text-accent px-3 py-1 border border-border">
                         View
                       </span>
                     </div>

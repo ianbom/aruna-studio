@@ -32,7 +32,7 @@ export default function HeroSlider() {
   const slide = heroSlides[current];
 
   return (
-    <section className="relative w-full h-screen min-h-[680px] max-h-[1100px] overflow-hidden bg-[#0a0a0a]">
+    <section className="relative w-full h-screen min-h-[680px] max-h-[1100px] overflow-hidden bg-[#0a0a0a] dark">
       {/* Background Image Carousel with Cinematic Crossfade & Subtle Settle */}
       <AnimatePresence mode="sync">
         <motion.div

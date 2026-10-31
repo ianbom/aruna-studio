@@ -43,7 +43,7 @@ export default function ArchitectureListingPage() {
 
       {/* Category Filter Tabs */}
       <ScrollReveal variant="fadeUpSubtle" delay={0.2}>
-        <div className="flex items-center space-x-6 md:space-x-10 border-b border-[#222222] pb-4 mb-16 overflow-x-auto text-xs tracking-widest uppercase">
+        <div className="flex items-center space-x-6 md:space-x-10 border-b border-border-subtle pb-4 mb-16 overflow-x-auto text-xs tracking-widest uppercase">
           {categories.map((cat) => (
             <button
               key={cat}

@@ -31,7 +31,7 @@ export default async function JournalArticlePage({ params }: Props) {
       : journalArticles[0];
 
   return (
-    <article className="pt-28 md:pt-36 pb-32 text-foreground bg-[#0a0a0a]">
+    <article className="pt-28 md:pt-36 pb-32 text-foreground bg-background">
       {/* Back button */}
       <div className="max-w-[960px] mx-auto px-6 mb-8">
         <ScrollReveal variant="fadeUpSubtle">
@@ -73,7 +73,7 @@ export default async function JournalArticlePage({ params }: Props) {
       {/* Featured Cover Image */}
       <div className="max-w-[1400px] mx-auto px-6 mb-16 md:mb-24">
         <ScrollReveal variant="scaleSubtle">
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#121212]">
+          <div className="relative aspect-[16/9] w-full overflow-hidden bg-background-secondary">
             <Image
               src={article.coverImage}
               alt={article.title}
@@ -103,7 +103,7 @@ export default async function JournalArticlePage({ params }: Props) {
       </div>
 
       {/* Read Next Section */}
-      <div className="max-w-[960px] mx-auto px-6 pt-16 border-t border-[#202020]">
+      <div className="max-w-[960px] mx-auto px-6 pt-16 border-t border-border-subtle">
         <ScrollReveal variant="fadeUpSubtle">
           <span className="text-[10px] tracking-ultra text-foreground-subtle uppercase block mb-2">
             Read Next
