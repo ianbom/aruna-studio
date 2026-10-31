@@ -6,8 +6,6 @@ import ProjectCard from "@/components/ProjectCard";
 import VerticalMarginalia from "@/components/VerticalMarginalia";
 import EditorialBreak from "@/components/EditorialBreak";
 import ScrollReveal from "@/components/motion/ScrollReveal";
-import TextReveal from "@/components/motion/TextReveal";
-import ImageReveal from "@/components/motion/ImageReveal";
 import { projects } from "@/data/projects";
 import { designItems } from "@/data/design";
 
@@ -87,17 +85,17 @@ export default function HomePage() {
         <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Folding chair image requested for monograph section */}
           <div className="lg:col-span-6">
-            <ImageReveal type="curtainUp" delay={0.05} amount={0.05}>
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#181818]">
+            <ScrollReveal variant="fadeUp" delay={0.05}>
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#181818] group">
                 <Image
                   src="https://images.unsplash.com/photo-1554941829-202a0b2403b8?auto=format&fit=crop&w=2000&q=85"
                   alt="Black Folding Chair on Canvas - Studio Monograph"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover filter brightness-90"
+                  className="object-cover object-center filter brightness-90 contrast-[1.02] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                 />
               </div>
-            </ImageReveal>
+            </ScrollReveal>
           </div>
 
           {/* Right: Typography Emergence */}
@@ -108,11 +106,11 @@ export default function HomePage() {
               </span>
             </ScrollReveal>
 
-            <TextReveal as="h2" variant="mask" className="mb-6">
-              <span className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide text-foreground block">
+            <ScrollReveal variant="fadeUp" delay={0.08} className="mb-6">
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide text-foreground block">
                 Spatial Poetics: The Subtractive Method
-              </span>
-            </TextReveal>
+              </h2>
+            </ScrollReveal>
 
             <ScrollReveal variant="fadeUp" delay={0.15}>
               <p className="font-sans text-xs md:text-sm text-foreground-muted leading-relaxed font-light mb-6">
@@ -275,11 +273,11 @@ export default function HomePage() {
             </span>
           </ScrollReveal>
 
-          <TextReveal as="h2" variant="mask" className="mb-6">
-            <span className="font-serif text-2xl md:text-3xl font-light text-foreground block">
+          <ScrollReveal variant="fadeUp" delay={0.08} className="mb-6">
+            <h2 className="font-serif text-2xl md:text-3xl font-light text-foreground block">
               Considering a new architectural project or spatial commission?
-            </span>
-          </TextReveal>
+            </h2>
+          </ScrollReveal>
 
           <ScrollReveal variant="fadeUp" delay={0.12}>
             <p className="text-xs text-foreground-muted mb-8 leading-relaxed">
