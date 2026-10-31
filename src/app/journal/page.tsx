@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { journalArticles } from "@/data/journal";
 import ScrollReveal from "@/components/motion/ScrollReveal";
-import TextReveal from "@/components/motion/TextReveal";
-import ImageReveal from "@/components/motion/ImageReveal";
 
 export default function JournalPage() {
   return (
@@ -17,11 +15,11 @@ export default function JournalPage() {
           </span>
         </ScrollReveal>
 
-        <TextReveal as="h1" variant="mask" className="mb-6">
-          <span className="font-serif text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-foreground max-w-4xl block">
+        <ScrollReveal variant="fadeUp" delay={0.05} className="mb-6">
+          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-foreground max-w-4xl block">
             Journal
-          </span>
-        </TextReveal>
+          </h1>
+        </ScrollReveal>
 
         <ScrollReveal variant="fadeUp" delay={0.12}>
           <p className="font-sans text-xs md:text-base text-foreground-muted leading-relaxed font-light max-w-2xl">
@@ -38,7 +36,7 @@ export default function JournalPage() {
             className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center"
           >
             <div className="lg:col-span-8">
-              <ImageReveal type="curtainUp">
+              <ScrollReveal variant="fadeUp" delay={0.05}>
                 <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#121212]">
                   <Image
                     src={journalArticles[0].coverImage}
@@ -49,7 +47,7 @@ export default function JournalPage() {
                     className="object-cover object-center filter brightness-[0.88] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   />
                 </div>
-              </ImageReveal>
+              </ScrollReveal>
             </div>
 
             <div className="lg:col-span-4 flex flex-col space-y-4">

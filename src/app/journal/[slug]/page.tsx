@@ -5,8 +5,6 @@ import { notFound } from "next/navigation";
 import { journalArticles } from "@/data/journal";
 import { ArrowLeft } from "lucide-react";
 import ScrollReveal from "@/components/motion/ScrollReveal";
-import TextReveal from "@/components/motion/TextReveal";
-import ImageReveal from "@/components/motion/ImageReveal";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -59,11 +57,11 @@ export default async function JournalArticlePage({ params }: Props) {
           </div>
         </ScrollReveal>
 
-        <TextReveal as="h1" variant="mask" className="mb-8">
-          <span className="font-serif text-3xl md:text-5xl lg:text-6xl text-foreground font-light leading-tight block">
+        <ScrollReveal variant="fadeUp" delay={0.05} className="mb-8">
+          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-foreground font-light leading-tight block">
             {article.title}
-          </span>
-        </TextReveal>
+          </h1>
+        </ScrollReveal>
 
         <ScrollReveal variant="fadeUp" delay={0.12}>
           <p className="font-serif text-lg md:text-xl text-foreground-muted italic leading-relaxed border-l-2 border-accent/40 pl-6">
@@ -74,7 +72,7 @@ export default async function JournalArticlePage({ params }: Props) {
 
       {/* Featured Cover Image */}
       <div className="max-w-[1400px] mx-auto px-6 mb-16 md:mb-24">
-        <ImageReveal type="scale" amount={0.08}>
+        <ScrollReveal variant="scaleSubtle">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#121212]">
             <Image
               src={article.coverImage}
@@ -85,7 +83,7 @@ export default async function JournalArticlePage({ params }: Props) {
               className="object-cover object-center filter brightness-[0.88]"
             />
           </div>
-        </ImageReveal>
+        </ScrollReveal>
       </div>
 
       {/* Article Long-form Body (stable, preserved reading flow) */}

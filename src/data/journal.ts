@@ -8,7 +8,7 @@ export const journalArticles: JournalArticle[] = [
     date: "October 14, 2026",
     readTime: "6 min read",
     category: "Philosophy",
-    coverImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=85",
+    coverImage: "https://images.unsplash.com/photo-1785080288560-7bd02a7bb36d?auto=format&fit=crop&w=2000&q=85",
     content: [
       "Modern architectural culture has long valorized the pursuit of unfiltered luminosity. Glass curtains, uniform ambient lumens, and sterile white planes promise transparency, yet frequently strip the domestic realm of comfort and introspective weight.",
       "In our atelier, we design with the conviction that shadow is an active building material. When sunlight is met by deep reveals, textured lime plaster, and charred timber partitions, it is softened into a gradual gradient. The eye relaxes, and the ear attunes to the stillness of the room.",
