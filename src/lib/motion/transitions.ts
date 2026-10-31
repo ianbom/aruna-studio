@@ -16,6 +16,6 @@ export const durations = {
 
 export const viewportDefaults = {
   once: true,
-  amount: 0.12,
-  margin: "0px 0px -8% 0px",
+  amount: 0.05,
+  margin: "0px",
 };

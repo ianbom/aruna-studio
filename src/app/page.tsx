@@ -85,32 +85,19 @@ export default function HomePage() {
       {/* 5. Editorial Monograph Break (Directional Image & Text Split) */}
       <section className="py-20 md:py-28 bg-[#111111] border-y border-[#202020] overflow-hidden">
         <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left: Monograph image with curtain reveal */}
+          {/* Left: Folding chair image requested for monograph section */}
           <div className="lg:col-span-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              <ImageReveal type="curtainUp" delay={0.08}>
-                <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#181818]">
-                  <Image
-                    src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=85"
-                    alt="Black Folding Chair Study"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                    className="object-cover filter brightness-85"
-                  />
-                </div>
-              </ImageReveal>
-              <ImageReveal type="curtainUp" delay={0.16}>
-                <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#181818]">
-                  <Image
-                    src="https://images.unsplash.com/photo-1723448837748-abfe11db8f45?auto=format&fit=crop&w=2000&q=85"
-                    alt="Spatial Poetics Monograph"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                    className="object-cover filter brightness-85"
-                  />
-                </div>
-              </ImageReveal>
-            </div>
+            <ImageReveal type="curtainUp" delay={0.05} amount={0.05}>
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#181818]">
+                <Image
+                  src="https://images.unsplash.com/photo-1554941829-202a0b2403b8?auto=format&fit=crop&w=2000&q=85"
+                  alt="Black Folding Chair on Canvas - Studio Monograph"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover filter brightness-90"
+                />
+              </div>
+            </ImageReveal>
           </div>
 
           {/* Right: Typography Emergence */}
